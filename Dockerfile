@@ -1,12 +1,12 @@
 #
-# Node JS 8.11 Runner Image
-# Docker image with tools and scripts installed to support the running of a Node JS 8.11 app through its 'start' script
+# Node JS 8.10 Runner Image
+# Docker image with tools and scripts installed to support the running of a Node JS 8.10 app through its 'start' script
 # Expects build artifacts (node_modules and dist directories) and package.json mounted at /home/runner/artifacts
 #
 
-FROM node:8.11.1-alpine
-MAINTAINER Agile Digital <info@agiledigital.com.au>
-LABEL Description="Docker image with libraries and tools as required to support the running of a Node JS 8.11 app" Vendor="Agile Digital" Version="0.1"
+FROM node:8.10.0-alpine
+LABEL maintainer Agile Digital <info@agiledigital.com.au>
+LABEL description="Docker image with libraries and tools as required to support the running of a Node JS 8.10 app" Vendor="Agile Digital" Version="0.1"
 
 ENV HOME /home/runner
 ENV RUNNER_USER runner
