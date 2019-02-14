@@ -6,7 +6,7 @@
 
 FROM node:8.10.0-alpine
 LABEL maintainer Agile Digital <info@agiledigital.com.au>
-LABEL description="Docker image with libraries and tools as required to support the running of a Node JS 8.10 app" Vendor="Agile Digital" Version="0.1"
+LABEL description="Docker image with libraries and tools as required to support the running of a Node JS 8.10 app (npm@6.8.0)" Vendor="Agile Digital" Version="0.2"
 
 ENV HOME /home/runner
 ENV RUNNER_USER runner
@@ -22,6 +22,7 @@ RUN chmod +x /home/runner/app/run.sh
 
 RUN chmod g+w /etc/passwd
 RUN chgrp -Rf root /home/runner && chmod -Rf g+w /home/runner
+RUN npm install -g npm@6.8.0
 
 EXPOSE 3000
 
